@@ -11,7 +11,11 @@ class Text {
 
     }
 
-    public int getFitnessScore(Text original){
+    public int getLength(){
+        text.size()
+    }
+
+    public int compareToOriginalAndScore(Text original){
         int count = 0
         for(int index = 0; index < original.text.size(); index++) {
             //Increment the counter variable for any characters that are the same.
