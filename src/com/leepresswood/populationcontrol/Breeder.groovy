@@ -2,7 +2,7 @@ package com.leepresswood.populationcontrol
 
 import com.leepresswood.population.Text
 
-class Breeder {
+class Breeder{
     private static final Integer POPULATION_GENERATION_SIZE = 100
     private static final int POPULATION_DIVISOR = 10
     
@@ -13,9 +13,8 @@ class Breeder {
     }
     
     public static List<Text> getNewPopulationMembersFromOld(List<Text> population){
-        int subpopulationSize = population.size() / POPULATION_DIVISOR
         List<Text> newPopulationMembers = []
-        subpopulationSize.times({
+        getSubpopulationSize(population).times({
             List<Text> subpopulation = getSubpopulation(population)
             Tuple2 parents = selectTwoMembers(subpopulation)
             newPopulationMembers << new Text(parents)
@@ -25,13 +24,19 @@ class Breeder {
     }
     
     private static List<Text> getSubpopulation(List<Text> population){
-        int subpopulationSize = population.size() / POPULATION_DIVISOR
-        Random random = new Random()
-    
-//        subpopulation.get
-        
+        List<Integer> selected = []
         List<Text> subpopulation = []
-        //        subpopulationSize.times {subpopulation << }
+        Random random = new Random()
+        
+        getSubpopulationSize(population).times({
+            int index = random.nextInt(properties.size())
+            while(index in selected){
+                index = random.nextInt(properties.size())
+            }
+            
+            selected << index
+            subpopulation << population[index]
+        })
     }
     
     private static Tuple2 selectTwoMembers(List<Text> subpopulation){
@@ -43,5 +48,9 @@ class Breeder {
         parent2 = subpopulation[1]
         
         new Tuple2(parent1, parent2)
+    }
+    
+    private static BigDecimal getSubpopulationSize(List<Text> population){
+        population.size() / POPULATION_DIVISOR
     }
 }
