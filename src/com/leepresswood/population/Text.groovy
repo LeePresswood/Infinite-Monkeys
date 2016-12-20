@@ -15,6 +15,10 @@ class Text {
     public Text(Tuple2 parents){
         
     }
+    
+    private String getRandomString(){
+        RandomStringUtils randomStringUtils = new RandomStringUtils()
+    }
 
     public int getLength(){
         text.size()
