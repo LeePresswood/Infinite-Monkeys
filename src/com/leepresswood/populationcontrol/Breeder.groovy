@@ -1,4 +1,6 @@
-package com.leepresswood
+package com.leepresswood.populationcontrol
+
+import com.leepresswood.Text
 
 class Breeder {
     private static final Integer POPULATION_GENERATION_SIZE = 100

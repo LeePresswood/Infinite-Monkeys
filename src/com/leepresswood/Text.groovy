@@ -1,21 +1,22 @@
 package com.leepresswood
 
 class Text {
-    String text
+    private String text
+    private Text original
 
     public Text(String text){
         this.text = text
     }
 
-    public Text(int length){
-
+    public Text(int length, Text original){
+        this.original = original
     }
 
     public int getLength(){
         text.size()
     }
 
-    public int compareToOriginalAndScore(Text original){
+    public int compareToOriginalAndScore(){
         int count = 0
         for(int index = 0; index < original.text.size(); index++) {
             //Increment the counter variable for any characters that are the same.
