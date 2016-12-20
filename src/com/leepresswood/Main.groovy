@@ -2,24 +2,38 @@ package com.leepresswood
 
 class Main {
     public static void main(String[] args) {
-        //First, get text to match against.
-        Text text = getTextFromFile("resources/word.txt")
-        int textLength = text.text.size()
+        Text original = getTextFromFile("resources/word.txt")
+        int textLength = original.text.size()
+        Text[] population = generatePopulation(textLength)
+        int attempts = loopUntilMatchIsFound(population, original, textLength)
 
-        //Next, create a population of randomly generated elements.
-        int populationSize = 100
-        Text[] population = []
-        populationSize.times { population << new Text(textLength)}
-
-        //Determine if any of these elements match the matched text.
-        int attempts = 0
-        if(population.any { it.getFitnessScore(text) == textLength}){
-            println "Text match found after $attempts attempt(s)."
-        }
-
+        println "Text match found after $attempts attempt(s)."
     }
+
+
 
     private static Text getTextFromFile(String fileName) {
         new Text(new File(fileName).text)
+    }
+
+    private static Text[] generatePopulation(int textLength) {
+        Text[] population = []
+        100.times { population << new Text(textLength) }
+        population
+    }
+
+    private static int loopUntilMatchIsFound(Text[] population, Text original, int textLength) {
+        int attempts = 0
+
+        while (!matchHasBeenFound(population, original, textLength)) {
+
+
+            attempts++
+        }
+        attempts
+    }
+
+    private static boolean matchHasBeenFound(Text[] population, Text text, int textLength) {
+        population.any { it.getFitnessScore(text) == textLength }
     }
 }
