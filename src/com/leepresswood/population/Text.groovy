@@ -1,4 +1,4 @@
-package com.leepresswood
+package com.leepresswood.population
 
 class Text {
     private String text

@@ -1,6 +1,6 @@
 package com.leepresswood.populationcontrol
 
-import com.leepresswood.Text
+import com.leepresswood.population.Text
 
 class Breeder {
     private static final Integer POPULATION_GENERATION_SIZE = 100
@@ -13,12 +13,28 @@ class Breeder {
     }
     
     public static List<Text> getNewPopulationMembersFromOld(List<Text> population){
-
+        int subpopulationSize = population.size() / POPULATION_DIVISOR
+        subpopulationSize.times({
+            List<Text> subpopulation = getSubpopulation(population)
+            Tuple2 parents = selectTwoMembers(subpopulation)
+            
+        })
+    
+    
+//        List<Integer> selected = []
+//        List<Text> subpopulation =
     }
     
-    public static List<Text> getSubpopulation(List<Text> population){
+    private static List<Text> getSubpopulation(List<Text> population){
         int subpopulationSize = population.size() / POPULATION_DIVISOR
         List<Text> subpopulation = []
         //        subpopulationSize.times {subpopulation << }
+    }
+    
+    private static Tuple2 selectTwoMembers(List<Text> subpopulation){
+        Text parent1
+        Text parent2
+        
+        
     }
 }
