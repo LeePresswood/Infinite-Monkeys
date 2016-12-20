@@ -19,25 +19,16 @@ class Main{
         int attempts = 0
         
         while(!matchHasBeenFound(population, original)){
-            List<Text> newPopulationMembers = Breeder.getNewPopulationMembers(population)
-            int[] membersToKill = Killer.targetWeakestMembers(population)
-            population = mergeNewPopulationMembersWithOld(population, newPopulationMembers, membersToKill)
-            
+            List<Text> newPopulationMembers = Breeder.getNewPopulationMembersFromOld(population)
+            Killer.killWeakestMembers(population)
+            population.addAll(newPopulationMembers)
+    
             attempts++
         }
         attempts
     }
     
     private static boolean matchHasBeenFound(List<Text> population, Text original){
-        population.any{ it.compareToOriginalAndScore(original) == original.length }
-    }
-    
-    private static List<Text> mergeNewPopulationMembersWithOld(List<Text> currentPopulation, List<Text> newPopulationMembers, int[] membersToKill){
-        membersToKill.eachWithIndex{ int killTargetIndex, int newMemberReplacementIndex ->
-            currentPopulation.remove(killTargetIndex)
-            currentPopulation << newPopulationMembers[newMemberReplacementIndex]
-        }
-        
-        currentPopulation
+        population.any{ it.compareToOriginalAndScore() == original.length }
     }
 }
