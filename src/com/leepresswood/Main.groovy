@@ -6,26 +6,22 @@ import com.leepresswood.populationcontrol.Killer
 class Main{
     public static void main(String[] args){
         Text original = getTextFromFile("resources/word.txt")
-        loopUntilMatchIsFound(original)
+        List<Text> population = Breeder.generateInitialPopulation(original)
+        int attempts = 0
+    
+        while(!matchHasBeenFound(population, original)){
+            getCurrentGenerationStats(original, population, attempts)
+            replaceWeakMembersWithNextGeneration(population)
+            attempts++
+        }
+    
+        println "Text match found after $attempts attempt(s)."
     }
     
     private static Text getTextFromFile(String fileName){
         File file = new File(fileName)
         String fileText = file.text
         new Text(fileText)
-    }
-    
-    private static int loopUntilMatchIsFound(Text original){
-        List<Text> population = Breeder.generateInitialPopulation(original)
-        int attempts = 0
-        
-        while(!matchHasBeenFound(population, original)){
-            getCurrentGenerationStats(original, population, attempts)
-            replaceWeakMembersWithNextGeneration(population)
-            attempts++
-        }
-        
-        println "Text match found after $attempts attempt(s)."
     }
     
     private static boolean matchHasBeenFound(List<Text> population, Text original){
