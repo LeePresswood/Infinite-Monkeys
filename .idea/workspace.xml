@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a16fb907-d700-4c3e-a484-fa5a50dc35cb" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/leepresswood/population/Population.groovy" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/leepresswood/Text.groovy" afterPath="$PROJECT_DIR$/src/com/leepresswood/population/Text.groovy" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/leepresswood/Main.groovy" afterPath="$PROJECT_DIR$/src/com/leepresswood/Main.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/leepresswood/population/Text.groovy" afterPath="$PROJECT_DIR$/src/com/leepresswood/population/Text.groovy" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/leepresswood/populationcontrol/Breeder.groovy" afterPath="$PROJECT_DIR$/src/com/leepresswood/populationcontrol/Breeder.groovy" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/leepresswood/populationcontrol/Killer.groovy" afterPath="$PROJECT_DIR$/src/com/leepresswood/populationcontrol/Killer.groovy" />
     </list>
@@ -43,8 +42,8 @@
       <file leaf-file-name="Text.groovy" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/leepresswood/population/Text.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+            <state relative-caret-position="238">
+              <caret line="14" column="22" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -63,8 +62,8 @@
       <file leaf-file-name="Breeder.groovy" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/leepresswood/populationcontrol/Breeder.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" column="12" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
+            <state relative-caret-position="2">
+              <caret line="2" column="39" selection-start-line="2" selection-start-column="39" selection-end-line="2" selection-end-column="39" />
               <folding />
             </state>
           </provider>
@@ -99,8 +98,8 @@
         <option value="$PROJECT_DIR$/src/com/leepresswood/Killer.groovy" />
         <option value="$PROJECT_DIR$/src/com/leepresswood/Main.groovy" />
         <option value="$PROJECT_DIR$/src/com/leepresswood/populationcontrol/SubpopulationSelector.groovy" />
-        <option value="$PROJECT_DIR$/src/com/leepresswood/populationcontrol/Breeder.groovy" />
         <option value="$PROJECT_DIR$/src/com/leepresswood/population/Text.groovy" />
+        <option value="$PROJECT_DIR$/src/com/leepresswood/populationcontrol/Breeder.groovy" />
       </list>
     </option>
   </component>
@@ -766,12 +765,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1482193095574</updated>
-      <workItem from="1482193096755" duration="8756000" />
+      <workItem from="1482193096755" duration="9132000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8756000" />
+    <option name="totallyTimeSpent" value="9132000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -898,6 +897,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/leepresswood/populationcontrol/Killer.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="23" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/leepresswood/population/Text.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="22" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/leepresswood/Main.groovy">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -908,26 +923,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/leepresswood/population/Text.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/leepresswood/populationcontrol/Killer.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="23" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/leepresswood/populationcontrol/Breeder.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="12" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
+        <state relative-caret-position="2">
+          <caret line="2" column="39" selection-start-line="2" selection-start-column="39" selection-end-line="2" selection-end-column="39" />
           <folding />
         </state>
       </provider>

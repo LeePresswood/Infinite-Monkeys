@@ -11,6 +11,10 @@ class Text {
     public Text(int length, Text original){
         this.original = original
     }
+    
+    public Text(Tuple2 parents){
+        
+    }
 
     public int getLength(){
         text.size()

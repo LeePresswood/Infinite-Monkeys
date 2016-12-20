@@ -1,6 +1,6 @@
 package com.leepresswood.populationcontrol
 
-import com.leepresswood.Text
+import com.leepresswood.population.Text
 
 class Killer{
     private static final int POPULATION_DIVISOR = 10

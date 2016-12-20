@@ -14,19 +14,22 @@ class Breeder {
     
     public static List<Text> getNewPopulationMembersFromOld(List<Text> population){
         int subpopulationSize = population.size() / POPULATION_DIVISOR
+        List<Text> newPopulationMembers = []
         subpopulationSize.times({
             List<Text> subpopulation = getSubpopulation(population)
             Tuple2 parents = selectTwoMembers(subpopulation)
-            
+            newPopulationMembers << new Text(parents)
         })
-    
-    
-//        List<Integer> selected = []
-//        List<Text> subpopulation =
+        
+        newPopulationMembers
     }
     
     private static List<Text> getSubpopulation(List<Text> population){
         int subpopulationSize = population.size() / POPULATION_DIVISOR
+        Random random = new Random()
+    
+//        subpopulation.get
+        
         List<Text> subpopulation = []
         //        subpopulationSize.times {subpopulation << }
     }
@@ -35,6 +38,10 @@ class Breeder {
         Text parent1
         Text parent2
         
+        subpopulation = subpopulation.sort({ it.compareToOriginalAndScore() }).reverse()
+        parent1 = subpopulation[0]
+        parent2 = subpopulation[1]
         
+        new Tuple2(parent1, parent2)
     }
 }

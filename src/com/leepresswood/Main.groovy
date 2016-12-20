@@ -1,5 +1,6 @@
 package com.leepresswood
 
+import com.leepresswood.population.Text
 import com.leepresswood.populationcontrol.Breeder
 import com.leepresswood.populationcontrol.Killer
 
