@@ -1,5 +1,7 @@
 package com.leepresswood.population
 
+import com.leepresswood.populationcontrol.Breeder
+
 class Text {
     private String text
     private Text original
@@ -8,19 +10,14 @@ class Text {
         this.text = text
     }
 
-    public Text(int length, Text original){
+    public Text(Text original){
         this.original = original
+        this.text = Breeder.getRandomString(original.length)
     }
     
     public Text(Tuple2 parents){
-        
-    }
-    
-    private String getRandomString(){
-        Random random = new Random()
-        def alphabet = ('a'..'z') + ('A'..'Z') + ' ' + ',' + '.' + '!' + '?' + '"' + '\'' + '$' + '%'
-        
-        (1..original.length).collect({ random.nextInt(alphabet.size() )}).join("")
+        this.original = parents.first.original
+        this.text = Breeder.breedTwoStrings(parents.first.text, parents.second.text)
     }
     
     public int getLength(){
@@ -30,7 +27,7 @@ class Text {
     public int compareToOriginalAndScore(){
         int count = 0
         for(int index = 0; index < original.text.size(); index++) {
-            //Increment the counter variable for any characters that are the same.
+            //Looking for any characters that match the parent. Fitter members have more matches.
             if(original.text.charAt(index) == this.text.charAt(index)){
                 count++
             }

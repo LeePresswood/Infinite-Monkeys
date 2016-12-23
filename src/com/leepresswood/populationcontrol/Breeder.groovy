@@ -3,13 +3,28 @@ package com.leepresswood.populationcontrol
 import com.leepresswood.population.Text
 
 class Breeder{
+    private static Random random = new Random()
+    private static List alphabet = ('a'..'z') + ('A'..'Z') + ' ' + ',' + '.' + '!' + '?' + '"' + '\'' + '$' + '%'
+    
     private static final Integer POPULATION_GENERATION_SIZE = 100
     private static final int POPULATION_DIVISOR = 10
     
     public static List<Text> generateInitialPopulation(Text original){
         List<Text> population = []
-        POPULATION_GENERATION_SIZE.times{ population << new Text(original.length, original) }
+        POPULATION_GENERATION_SIZE.times{ population << new Text(original) }
         population
+    }
+    
+    public static String getRandomString(int length){
+        (1..length).collect({ getRandomChar() }).join("")
+    }
+    
+    public static char getRandomChar(){
+        alphabet[random.nextInt(alphabet.size())]
+    }
+    
+    public static String breedTwoStrings(String s1, String s2){
+        
     }
     
     public static List<Text> getNewPopulationMembersFromOld(List<Text> population){
