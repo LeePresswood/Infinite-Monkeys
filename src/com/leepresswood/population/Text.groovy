@@ -1,6 +1,5 @@
 package com.leepresswood.population
 
-import com.leepresswood.populationcontrol.Breeder
 import com.leepresswood.util.RandomStringUtils
 
 class Text {
@@ -16,9 +15,9 @@ class Text {
         this.text = RandomStringUtils.getRandomString(original.length)
     }
     
-    public Text(Tuple2 parents){
-        this.original = parents.first.original
-        this.text = Breeder.breedTwoStrings(parents.first.text, parents.second.text)
+    public Text(Text original, String text){
+        this.original = original
+        this.text = text
     }
     
     public int getLength(){

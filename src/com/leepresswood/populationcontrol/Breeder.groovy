@@ -10,40 +10,42 @@ class Breeder{
     private static final int POPULATION_DIVISOR = 10
     
     public static List<Text> generateInitialPopulation(Text original){
-        List<Text> population = []
-        POPULATION_GENERATION_SIZE.times{ population << new Text(original) }
-        population
+        (1..POPULATION_GENERATION_SIZE).collect({ new Text(original) })
     }
     
-    public static String breedTwoStrings(String s1, String s2){
-        int charactersToBreed = s1.chars.length
+    public static List<Text> getNewPopulationMembersFromOld(List<Text> population){
+        (1..getSubpopulationSize(population)).collect({ getNewMemberFromParents(getParents(population)) })
+    }
+    
+    private static Tuple2 getParents(List<Text> population){
+        selectTwoMembers(getSubpopulation(population))
+    }
+    
+    private static void getNewMemberFromParents(Tuple2 parents){
+        String[] parentStrings = [parents.first.text, parents.second.text]
+        Text original = parents.first.original
+        String result = breedTwoStrings(*parentStrings)
+        new Text(original, result)
+    }
+    
+    private static String breedTwoStrings(String s1, String s2){
+        int lengthOfCharacterArray = s1.chars.length
         float percentParent2 = 100f - MUTATION_CHANCE
         float percentParent1 = percentParent2 / 2f;
         
         String newString = ""
-        charactersToBreed.times{
+        lengthOfCharacterArray.times{
             float roll = random.nextFloat()
             if(roll < percentParent1){
                 newString << s1.charAt(it)
-            }
-            else if(roll < percentParent2){
+            } else if(roll < percentParent2){
                 newString << s2.charAt(it)
-            }
-            else{
+            } else{
                 newString << RandomStringUtils.getRandomChar()
             }
         }
-    }
-    
-    public static List<Text> getNewPopulationMembersFromOld(List<Text> population){
-        List<Text> newPopulationMembers = []
-        getSubpopulationSize(population).times({
-            List<Text> subpopulation = getSubpopulation(population)
-            Tuple2 parents = selectTwoMembers(subpopulation)
-            newPopulationMembers << new Text(parents)
-        })
         
-        newPopulationMembers
+        newString
     }
     
     private static List<Text> getSubpopulation(List<Text> population){
@@ -73,7 +75,7 @@ class Breeder{
         new Tuple2(parent1, parent2)
     }
     
-    private static BigDecimal getSubpopulationSize(List<Text> population){
+    private static int getSubpopulationSize(List<Text> population){
         population.size() / POPULATION_DIVISOR
     }
 }
