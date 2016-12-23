@@ -1,11 +1,12 @@
 package com.leepresswood.populationcontrol
 
 import com.leepresswood.population.Text
+import com.leepresswood.util.RandomStringUtils
 
 class Breeder{
-    private static Random random = new Random()
-    
-    private static final Integer POPULATION_GENERATION_SIZE = 100
+    private static final Random random = new Random()
+    private static final float MUTATION_CHANCE = 1.0f
+    private static final int POPULATION_GENERATION_SIZE = 100
     private static final int POPULATION_DIVISOR = 10
     
     public static List<Text> generateInitialPopulation(Text original){
@@ -15,7 +16,23 @@ class Breeder{
     }
     
     public static String breedTwoStrings(String s1, String s2){
+        int charactersToBreed = s1.chars.length
+        float percentParent2 = 100f - MUTATION_CHANCE
+        float percentParent1 = percentParent2 / 2f;
         
+        String newString = ""
+        charactersToBreed.times{
+            float roll = random.nextFloat()
+            if(roll < percentParent1){
+                newString << s1.charAt(it)
+            }
+            else if(roll < percentParent2){
+                newString << s2.charAt(it)
+            }
+            else{
+                newString << RandomStringUtils.getRandomChar()
+            }
+        }
     }
     
     public static List<Text> getNewPopulationMembersFromOld(List<Text> population){

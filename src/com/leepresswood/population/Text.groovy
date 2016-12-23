@@ -1,6 +1,7 @@
 package com.leepresswood.population
 
 import com.leepresswood.populationcontrol.Breeder
+import com.leepresswood.util.RandomStringUtils
 
 class Text {
     private String text
@@ -12,7 +13,7 @@ class Text {
 
     public Text(Text original){
         this.original = original
-        this.text = Breeder.getRandomString(original.length)
+        this.text = RandomStringUtils.getRandomString(original.length)
     }
     
     public Text(Tuple2 parents){
