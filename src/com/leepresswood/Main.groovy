@@ -41,11 +41,8 @@ class Main{
     }
     
     private static void replaceWeakMembersWithNextGeneration(List<Text> population){
-        println population.size()
         Killer.killWeakestMembers(population)
-        println population.size()
         List<Text> newPopulationMembers = Breeder.getNewPopulationMembersFromOld(population)
         population.addAll(newPopulationMembers)
-        println population.size()
     }
 }

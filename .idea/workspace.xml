@@ -2,21 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a16fb907-d700-4c3e-a484-fa5a50dc35cb" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Infinite-Monkeys/com/leepresswood/population/Text$_getRandomString_closure1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Infinite-Monkeys/com/leepresswood/populationcontrol/Breeder$_getSubpopulation_closure3.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Infinite-Monkeys/com/leepresswood/populationcontrol/Breeder$_selectTwoMembers_closure4.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Infinite-Monkeys/com/leepresswood/Main$_getCurrentGenerationStats_closure2.class" afterPath="$PROJECT_DIR$/out/production/Infinite-Monkeys/com/leepresswood/Main$_getCurrentGenerationStats_closure2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Infinite-Monkeys/com/leepresswood/Main$_getCurrentGenerationStats_closure3.class" afterPath="$PROJECT_DIR$/out/production/Infinite-Monkeys/com/leepresswood/Main$_getCurrentGenerationStats_closure3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Infinite-Monkeys/com/leepresswood/Main$_matchHasBeenFound_closure1.class" afterPath="$PROJECT_DIR$/out/production/Infinite-Monkeys/com/leepresswood/Main$_matchHasBeenFound_closure1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Infinite-Monkeys/com/leepresswood/Main.class" afterPath="$PROJECT_DIR$/out/production/Infinite-Monkeys/com/leepresswood/Main.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Infinite-Monkeys/com/leepresswood/population/Text.class" afterPath="$PROJECT_DIR$/out/production/Infinite-Monkeys/com/leepresswood/population/Text.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Infinite-Monkeys/com/leepresswood/populationcontrol/Breeder$_generateInitialPopulation_closure1.class" afterPath="$PROJECT_DIR$/out/production/Infinite-Monkeys/com/leepresswood/populationcontrol/Breeder$_generateInitialPopulation_closure1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Infinite-Monkeys/com/leepresswood/populationcontrol/Breeder$_getNewPopulationMembersFromOld_closure2.class" afterPath="$PROJECT_DIR$/out/production/Infinite-Monkeys/com/leepresswood/populationcontrol/Breeder$_getNewPopulationMembersFromOld_closure2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Infinite-Monkeys/com/leepresswood/populationcontrol/Breeder.class" afterPath="$PROJECT_DIR$/out/production/Infinite-Monkeys/com/leepresswood/populationcontrol/Breeder.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/leepresswood/Main.groovy" afterPath="$PROJECT_DIR$/src/com/leepresswood/Main.groovy" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/leepresswood/populationcontrol/Breeder.groovy" afterPath="$PROJECT_DIR$/src/com/leepresswood/populationcontrol/Breeder.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/leepresswood/populationcontrol/Killer.groovy" afterPath="$PROJECT_DIR$/src/com/leepresswood/populationcontrol/Killer.groovy" />
     </list>
     <ignored path="Infinite-Monkeys.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -61,8 +48,8 @@
       <file leaf-file-name="Breeder.groovy" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/leepresswood/populationcontrol/Breeder.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-645">
-              <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
+            <state relative-caret-position="289">
+              <caret line="32" column="33" selection-start-line="32" selection-start-column="33" selection-end-line="32" selection-end-column="33" />
               <folding>
                 <element signature="e#44#83#0" expanded="true" />
               </folding>
@@ -83,8 +70,8 @@
       <file leaf-file-name="Main.groovy" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/leepresswood/Main.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="429">
-              <caret line="46" column="57" selection-start-line="46" selection-start-column="57" selection-end-line="46" selection-end-column="57" />
+            <state relative-caret-position="412">
+              <caret line="45" column="47" selection-start-line="45" selection-start-column="47" selection-end-line="45" selection-end-column="47" />
               <folding>
                 <element signature="e#26#65#0" expanded="true" />
               </folding>
@@ -134,9 +121,9 @@
         <option value="$APPLICATION_CONFIG_DIR$/consoles/groovy/groovy_console_1.groovy" />
         <option value="$PROJECT_DIR$/src/com/leepresswood/util/RandomStringUtils.groovy" />
         <option value="$PROJECT_DIR$/src/com/leepresswood/population/Text.groovy" />
-        <option value="$PROJECT_DIR$/src/com/leepresswood/Main.groovy" />
         <option value="$PROJECT_DIR$/src/com/leepresswood/populationcontrol/Killer.groovy" />
         <option value="$PROJECT_DIR$/src/com/leepresswood/populationcontrol/Breeder.groovy" />
+        <option value="$PROJECT_DIR$/src/com/leepresswood/Main.groovy" />
       </list>
     </option>
   </component>
@@ -855,12 +842,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1482193095574</updated>
-      <workItem from="1482193096755" duration="22049000" />
+      <workItem from="1482193096755" duration="22205000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22049000" />
+    <option name="totallyTimeSpent" value="22205000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1005,19 +992,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/leepresswood/populationcontrol/Breeder.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-645">
-          <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
+        <state relative-caret-position="289">
+          <caret line="32" column="33" selection-start-line="32" selection-start-column="33" selection-end-line="32" selection-end-column="33" />
           <folding>
             <element signature="e#44#83#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/leepresswood/populationcontrol/Killer.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="8" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1029,10 +1008,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/leepresswood/populationcontrol/Killer.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="8" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/leepresswood/Main.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="429">
-          <caret line="46" column="57" selection-start-line="46" selection-start-column="57" selection-end-line="46" selection-end-column="57" />
+        <state relative-caret-position="412">
+          <caret line="45" column="47" selection-start-line="45" selection-start-column="47" selection-end-line="45" selection-end-column="47" />
           <folding>
             <element signature="e#26#65#0" expanded="true" />
           </folding>

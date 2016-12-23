@@ -5,7 +5,7 @@ import com.leepresswood.util.RandomStringUtils
 
 class Breeder{
     private static final Random random = new Random()
-    private static final float MUTATION_CHANCE = 1.0f
+    private static final float MUTATION_CHANCE = 0.05f
     private static final int POPULATION_GENERATION_SIZE = 100
     private static final int POPULATION_DIVISOR = 10
     
@@ -30,7 +30,7 @@ class Breeder{
     
     private static String breedTwoStrings(String s1, String s2){
         int lengthOfCharacterArray = s1.chars.length
-        float percentParent2 = 100f - MUTATION_CHANCE
+        float percentParent2 = 1f - MUTATION_CHANCE
         float percentParent1 = percentParent2 / 2f;
         
         String newString = ""
