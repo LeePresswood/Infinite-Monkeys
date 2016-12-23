@@ -17,9 +17,12 @@ class Text {
     }
     
     private String getRandomString(){
-        RandomStringUtils randomStringUtils = new RandomStringUtils()
+        Random random = new Random()
+        def alphabet = ('a'..'z') + ('A'..'Z') + ' ' + ',' + '.' + '!' + '?' + '"' + '\'' + '$' + '%'
+        
+        (1..original.length).collect({ random.nextInt(alphabet.size() )}).join("")
     }
-
+    
     public int getLength(){
         text.size()
     }
