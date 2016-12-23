@@ -4,9 +4,10 @@ import com.leepresswood.population.Text
 import com.leepresswood.util.RandomStringUtils
 
 class Breeder{
+    public static final int POPULATION_GENERATION_SIZE = 100
+    
     private static final Random random = new Random()
     private static final float MUTATION_CHANCE = 0.05f
-    private static final int POPULATION_GENERATION_SIZE = 100
     private static final int POPULATION_DIVISOR = 10
     
     public static List<Text> generateInitialPopulation(Text original){
