@@ -2,17 +2,13 @@ package com.leepresswood.population
 
 import com.leepresswood.util.RandomStringUtils
 
-class Text {
+class Text{
     public String text
     public Text original
-
-    public Text(String text){
-        this.text = text
-    }
-
+    
     public Text(Text original){
         this.original = original
-        this.text = RandomStringUtils.getRandomString(original.length)
+        this.text = RandomStringUtils.getRandomString(original.text.size())
     }
     
     public Text(Text original, String text){
@@ -20,19 +16,19 @@ class Text {
         this.text = text
     }
     
-    public int getLength(){
-        text.size()
+    public static Text createOriginalTextInstance(String text){
+        new Text(null, text)
     }
-
+    
     public int compareToOriginalAndScore(){
         int count = 0
-        for(int index = 0; index < original.text.size(); index++) {
+        original.text.size().times{
             //Looking for any characters that match the parent. Fitter members have more matches.
-            if(original.text.charAt(index) == this.text.charAt(index)){
+            if(original.text.charAt(it) == this.text.charAt(it)){
                 count++
             }
         }
-
+        
         count
     }
 }
