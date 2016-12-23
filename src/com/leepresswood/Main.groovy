@@ -16,7 +16,7 @@ class Main{
             replaceWeakMembersWithNextGeneration(population)
         }
     
-        logger.printFinalStats(original, population)
+        logger.printFinalStats()
     }
     
     private static Text getTextFromFile(String fileName){
