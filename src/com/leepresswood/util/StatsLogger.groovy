@@ -26,14 +26,18 @@ class StatsLogger{
     }
     
     public void printFinalStats(){
-        double minRate = minList.sum({ it }) / (double) minList.size()
-        double maxRate = maxList.sum({ it }) / (double) maxList.size()
-        double averageRate = averageList.sum({ it }) / (double) averageList.size()
+        double minRate = getAverageRateOfList(minList)
+        double maxRate = getAverageRateOfList(maxList)
+        double averageRate = getAverageRateOfList(averageList)
     
         println "\n===============================\nMatch Found!\n"
         println "Text match found after $attempts attempt(s)."
         println "Min rate of change: ${minRate.round(3)}"
         println "Max rate of change: ${maxRate.round(3)}"
         println "Average rate of change: ${averageRate.round(3)}"
+    }
+    
+    private double getAverageRateOfList(List list){
+        list.sum({ it }) / ((double) list.size())
     }
 }
