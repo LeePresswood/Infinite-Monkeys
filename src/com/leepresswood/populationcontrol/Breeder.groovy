@@ -14,14 +14,13 @@ class Breeder{
     }
     
     public static List<Text> getNewPopulationMembersFromOld(List<Text> population){
-        (1..getSubpopulationSize(population)).collect({ getNewMemberFromParents(getParents(population)) })
+        (1..getSubpopulationSize(population)).collect({ getNewMemberFromParents(population) })
     }
     
-    private static Tuple2 getParents(List<Text> population){
-        selectTwoMembers(getSubpopulation(population))
-    }
+    private static void getNewMemberFromParents(List<Text> population){
+        List<Text> subpopulation = getSubpopulation(population)
+        Tuple2<Text, Text> parents = selectTwoMembers(subpopulation)
     
-    private static void getNewMemberFromParents(Tuple2 parents){
         String[] parentStrings = [parents.first.text, parents.second.text]
         Text original = parents.first.original
         String result = breedTwoStrings(*parentStrings)

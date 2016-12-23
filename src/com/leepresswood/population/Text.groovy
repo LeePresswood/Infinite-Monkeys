@@ -3,8 +3,8 @@ package com.leepresswood.population
 import com.leepresswood.util.RandomStringUtils
 
 class Text {
-    private String text
-    private Text original
+    public String text
+    public Text original
 
     public Text(String text){
         this.text = text
