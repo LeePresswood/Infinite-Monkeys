@@ -30,19 +30,22 @@ class Main{
     }
     
     private static void getCurrentGenerationStats(Text original, List<Text> population, int attempts){
-        def memberScoreClosure = { it.compareToOriginalAndScore() }
-        
+        int populationSize = population.size()
         int maxPossible = original.text.size()
-        int min = population.min(memberScoreClosure).compareToOriginalAndScore()
-        int max = population.max(memberScoreClosure).compareToOriginalAndScore()
-        double average = population.sum({ (double) it.compareToOriginalAndScore / (double) maxPossible })
+        int min = population.min({ it.compareToOriginalAndScore() }).compareToOriginalAndScore()
+        int max = population.max({ it.compareToOriginalAndScore() }).compareToOriginalAndScore()
+        double average = population.sum({ it.compareToOriginalAndScore() }) / (double) populationSize
+        Text closest = population.sort({ it.compareToOriginalAndScore() }).reverse()[0]
         
-        println "Attempt number $attempts.\nMin: $min\nMax: $max\nMax Possible: $maxPossible\nAverage: $average\n"
+        println "\nAttempt number $attempts.\nMin: $min\nMax: $max\nMax Possible: $maxPossible\nAverage: ${average.round(3)}\nOriginal: ${original.text}\nClosest: ${closest.text}"
     }
     
     private static void replaceWeakMembersWithNextGeneration(List<Text> population){
+        println population.size()
         Killer.killWeakestMembers(population)
+        println population.size()
         List<Text> newPopulationMembers = Breeder.getNewPopulationMembersFromOld(population)
         population.addAll(newPopulationMembers)
+        println population.size()
     }
 }

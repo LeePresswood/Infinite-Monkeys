@@ -7,7 +7,7 @@ class Killer{
     
     public static void killWeakestMembers(List<Text> population){
         int numberToKill = population.size() / POPULATION_DIVISOR
-        population = population.sort({ Text member -> member.compareToOriginalAndScore() }).reverse()
-        numberToKill.times({ population.pop() })
+        population = population.sort({ it.compareToOriginalAndScore() })
+        numberToKill.times({ population.removeAt(0) })
     }
 }

@@ -14,16 +14,17 @@ class Breeder{
     }
     
     public static List<Text> getNewPopulationMembersFromOld(List<Text> population){
-        (1..getSubpopulationSize(population)).collect({ getNewMemberFromParents(population) })
+        (0..getSubpopulationSize(population)).collect({ getNewMemberFromParents(population) })
     }
     
-    private static void getNewMemberFromParents(List<Text> population){
+    private static Text getNewMemberFromParents(List<Text> population){
         List<Text> subpopulation = getSubpopulation(population)
         Tuple2<Text, Text> parents = selectTwoMembers(subpopulation)
     
         String[] parentStrings = [parents.first.text, parents.second.text]
         Text original = parents.first.original
         String result = breedTwoStrings(*parentStrings)
+        
         new Text(original, result)
     }
     
@@ -36,14 +37,14 @@ class Breeder{
         lengthOfCharacterArray.times{
             float roll = random.nextFloat()
             if(roll < percentParent1){
-                newString << s1.charAt(it)
+                newString += s1.charAt(it)
             } else if(roll < percentParent2){
-                newString << s2.charAt(it)
+                newString += s2.charAt(it)
             } else{
-                newString << RandomStringUtils.getRandomChar()
+                newString += RandomStringUtils.getRandomChar()
             }
         }
-        
+    
         newString
     }
     
@@ -61,6 +62,8 @@ class Breeder{
             selected << index
             subpopulation << population[index]
         })
+        
+        subpopulation
     }
     
     private static Tuple2 selectTwoMembers(List<Text> subpopulation){
